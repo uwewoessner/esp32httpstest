@@ -87,7 +87,7 @@ void setClock() {
 }
 
 
-WiFiMulti WiFiMulti;
+WiFiMulti wiFiMulti;
 
 void setup() {
 
@@ -99,11 +99,11 @@ void setup() {
   Serial.println();
 
   WiFi.mode(WIFI_STA);
-  WiFiMulti.addAP(WIFI_SSID, WIFI_PASS);
+  wiFiMulti.addAP(WIFI_SSID, WIFI_PASS);
 
   // wait for WiFi connection
   Serial.print("Waiting for WiFi to connect...");
-  while ((WiFiMulti.run() != WL_CONNECTED)) {
+  while ((wiFiMulti.run() != WL_CONNECTED)) {
     Serial.print(".");
     
     delay(500);
